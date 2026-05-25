@@ -39,9 +39,6 @@ export default function About() {
               {/* Overlay card at bottom */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#0d2140]/95 via-[#0d2140]/70 to-transparent p-6">
                 <h3 className="text-white font-black text-xl">Mohamed Salah Zorgui</h3>
-                <p className="text-[#e8801a] text-sm font-semibold mt-0.5">
-                  {language === "fr" ? "Fondateur & Directeur Général" : "المؤسس والمدير العام"}
-                </p>
               </div>
               {/* Decorative accent */}
               <div className="absolute top-4 right-4 w-12 h-12 rounded-xl bg-[#e8801a] flex items-center justify-center shadow-lg">

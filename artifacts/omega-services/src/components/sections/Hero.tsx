@@ -1,5 +1,5 @@
 import { useLanguage } from "@/context/LanguageContext";
-import heroImg from "@/assets/images/hero-bg.png";
+import heroImg from "@assets/file_00000000561c7246a7d2482ac8daa2ad_1779728015512.png";
 import logoImg from "@assets/5770-removebg-preview_edit_1199571528561730_1779727430767.png";
 import { motion } from "framer-motion";
 

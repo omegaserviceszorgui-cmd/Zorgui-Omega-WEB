@@ -27,14 +27,14 @@ export default function Contact() {
       icon: Phone,
       labelFr: "Téléphone",
       labelAr: "الهاتف",
-      value: "98 284 858",
+      value: "98284858",
       href: "tel:+21698284858",
     },
     {
       icon: MessageCircle,
       labelFr: "WhatsApp",
       labelAr: "واتساب",
-      value: "54 651 063",
+      value: "54651063",
       href: "https://wa.me/21654651063",
     },
     {
@@ -90,7 +90,7 @@ export default function Contact() {
                   <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-0.5">
                     {language === "fr" ? info.labelFr : info.labelAr}
                   </div>
-                  <div className="font-semibold text-[#1a3c6e] text-sm">{info.value}</div>
+                  <div className="font-semibold text-[#1a3c6e] text-sm" dir="ltr">{info.value}</div>
                 </div>
               </a>
             ))}
