@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import retraiteImg from "@/assets/images/blog-retraite.png";
 import visaImg from "@/assets/images/blog-visa.png";
 import etudiantsImg from "@/assets/images/blog-etudiants.png";
+import securiteSocialeImg from "@assets/1779728864526_1779728891028.png";
 
 const posts = [
   {
@@ -39,7 +40,7 @@ const posts = [
     color: "bg-orange-100 text-orange-700",
   },
   {
-    img: retraiteImg,
+    img: securiteSocialeImg,
     category: { fr: "Sécurité Sociale", ar: "الضمان الاجتماعي" },
     title: { fr: "Vos droits à la sécurité sociale expliqués simplement", ar: "حقوقك في الضمان الاجتماعي بشكل مبسط" },
     excerpt: {

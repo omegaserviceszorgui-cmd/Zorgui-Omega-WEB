@@ -1,6 +1,6 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
-import logoImg from "@assets/5770-removebg-preview_edit_1199571528561730_1779727430767.png";
+import logoImg from "@assets/IMG_20260521_210449_1779728431059.png";
 
 export default function Footer() {
   const { t, language } = useLanguage();
