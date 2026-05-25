@@ -1,5 +1,6 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import logoImg from "@assets/5770-removebg-preview_edit_1199571528561730_1779727430767.png";
 
 export default function Footer() {
   const { t, language } = useLanguage();
@@ -22,9 +23,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-1 mb-4">
-              <span className="text-white font-black text-2xl tracking-tight">OMEGA</span>
-              <span className="text-[#e8801a] font-black text-2xl tracking-tight">SERVICES</span>
+            <div className="mb-4">
+              <img src={logoImg} alt="OMEGA SERVICES" className="h-16 w-auto object-contain" />
             </div>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs mb-6">
               {language === "fr"
@@ -32,24 +32,16 @@ export default function Footer() {
                 : "شريكك الموثوق لجميع إجراءاتك الإدارية في القصرين، تونس."}
             </p>
             <div className="flex gap-3">
-              <a
-                href="https://wa.me/21654651063"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 bg-white/10 hover:bg-[#25D366] rounded-lg flex items-center justify-center transition-colors"
-              >
+              <a href="https://wa.me/21654651063" target="_blank" rel="noopener noreferrer"
+                className="w-9 h-9 bg-white/10 hover:bg-[#25D366] rounded-lg flex items-center justify-center transition-colors">
                 <MessageCircle size={16} />
               </a>
-              <a
-                href="mailto:omegaserviceszorgui@gmail.com"
-                className="w-9 h-9 bg-white/10 hover:bg-[#e8801a] rounded-lg flex items-center justify-center transition-colors"
-              >
+              <a href="mailto:omegaserviceszorgui@gmail.com"
+                className="w-9 h-9 bg-white/10 hover:bg-[#e8801a] rounded-lg flex items-center justify-center transition-colors">
                 <Mail size={16} />
               </a>
-              <a
-                href="tel:+21698284858"
-                className="w-9 h-9 bg-white/10 hover:bg-[#1a3c6e] rounded-lg flex items-center justify-center transition-colors"
-              >
+              <a href="tel:+21698284858"
+                className="w-9 h-9 bg-white/10 hover:bg-[#1a3c6e] rounded-lg flex items-center justify-center transition-colors">
                 <Phone size={16} />
               </a>
             </div>
@@ -61,12 +53,10 @@ export default function Footer() {
               {language === "fr" ? "Navigation" : "التنقل"}
             </h4>
             <ul className="space-y-2">
-              {links.map((l) => (
+              {links.map(l => (
                 <li key={l.key}>
-                  <button
-                    onClick={() => scrollTo(l.id)}
-                    className="text-white/60 hover:text-[#e8801a] text-sm transition-colors"
-                  >
+                  <button onClick={() => scrollTo(l.id)}
+                    className="text-white/60 hover:text-[#e8801a] text-sm transition-colors">
                     {t(l.key)}
                   </button>
                 </li>

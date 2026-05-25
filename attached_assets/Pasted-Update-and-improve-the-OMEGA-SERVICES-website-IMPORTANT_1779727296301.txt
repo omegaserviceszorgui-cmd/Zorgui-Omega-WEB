@@ -1,0 +1,115 @@
+Update and improve the OMEGA SERVICES website.
+
+IMPORTANT:
+Keep the project lightweight and optimized for Replit.
+Do not generate unnecessary heavy code.
+
+━━━━━━━━━━━━━━━━━━
+🖼️ SERVICE CARDS IMAGES
+━━━━━━━━━━━━━━━━━━
+
+Replace and update the current service card images using the uploaded images provided by the user.
+
+Each service card must display:
+- a professional realistic image
+- modern corporate style
+- responsive image
+- soft hover zoom effect
+- smooth transition
+- rounded corners
+- elegant overlay
+
+Services:
+- Services administratifs
+- Sécurité sociale
+- Retraite à l’étranger
+- VISA
+- Étudiants
+- Ressources humaines
+
+━━━━━━━━━━━━━━━━━━
+🖼️ LOGO
+━━━━━━━━━━━━━━━━━━
+
+Use the uploaded logo as the official website logo.
+
+Add the logo:
+- in navbar
+- in footer
+- in hero section as a floating watermark
+
+Add subtle premium animation:
+- floating effect
+- soft fade animation
+- low opacity watermark effect
+
+Do NOT overuse animation.
+
+━━━━━━━━━━━━━━━━━━
+👤 ABOUT / QUI SOMMES-NOUS
+━━━━━━━━━━━━━━━━━━
+
+Add the uploaded founder image inside the “Qui sommes-nous ? / من نحن” section.
+
+Create:
+- elegant founder card
+- responsive layout
+- modern typography
+- professional presentation
+
+Text:
+Mohamed Salah Zorgui
+Plus de 30 ans d’expérience dans l’administration, la sécurité sociale et les dossiers de retraite.
+
+━━━━━━━━━━━━━━━━━━
+🧩 SERVICE CARD INTERACTION
+━━━━━━━━━━━━━━━━━━
+
+IMPORTANT:
+
+When the user clicks on a service card:
+- open the card content in the CENTER of the screen
+- use a smooth modal popup
+- dark blurred background overlay
+- smooth animation
+- close button
+
+Inside modal:
+- service image
+- detailed description
+- CTA buttons:
+  - WhatsApp
+  - Réserver
+  - Contact
+
+Use:
+- modern UI
+- glassmorphism
+- responsive modal
+- lightweight animations
+
+━━━━━━━━━━━━━━━━━━
+📱 RESPONSIVE DESIGN
+━━━━━━━━━━━━━━━━━━
+
+Ensure:
+- mobile optimization
+- tablet compatibility
+- desktop responsiveness
+
+━━━━━━━━━━━━━━━━━━
+⚙️ OPTIMIZATION
+━━━━━━━━━━━━━━━━━━
+
+Optimize:
+- images
+- loading speed
+- animations
+- mobile performance
+
+Keep code:
+- clean
+- modular
+- lightweight
+- Replit friendly
+- GitHub compatible

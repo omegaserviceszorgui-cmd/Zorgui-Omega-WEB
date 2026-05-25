@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Search, Menu, X } from "lucide-react";
+import logoImg from "@assets/5770-removebg-preview_edit_1199571528561730_1779727430767.png";
 
 const searchableItems = [
   { label: { fr: "Services administratifs variés", ar: "خدمات إدارية متنوعة" }, section: "services" },
@@ -13,11 +14,10 @@ const searchableItems = [
   { label: { fr: "Infographies", ar: "الرسوم البيانية" }, section: "knowledge" },
   { label: { fr: "Blog Retraite", ar: "مدونة التقاعد" }, section: "blog" },
   { label: { fr: "Blog VISA", ar: "مدونة التأشيرة" }, section: "blog" },
-  { label: { fr: "Sécurité Sociale", ar: "الضمان الاجتماعي" }, section: "blog" },
 ];
 
 export default function Navbar() {
-  const { t, language, setLanguage, isRtl } = useLanguage();
+  const { t, language, setLanguage } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [search, setSearch] = useState("");
@@ -43,26 +43,15 @@ export default function Navbar() {
 
   const handleSearch = (val: string) => {
     setSearch(val);
-    if (val.trim().length < 2) {
-      setResults([]);
-      setShowResults(false);
-      return;
-    }
+    if (val.trim().length < 2) { setResults([]); setShowResults(false); return; }
     const lower = val.toLowerCase();
-    const filtered = searchableItems.filter(
-      (i) =>
-        i.label.fr.toLowerCase().includes(lower) ||
-        i.label.ar.includes(val)
-    );
-    setResults(filtered);
+    setResults(searchableItems.filter(i => i.label.fr.toLowerCase().includes(lower) || i.label.ar.includes(val)));
     setShowResults(true);
   };
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-    setMobileOpen(false);
-    setShowResults(false);
-    setSearch("");
+    setMobileOpen(false); setShowResults(false); setSearch("");
   };
 
   const navLinks = [
@@ -74,34 +63,19 @@ export default function Navbar() {
   ];
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-[#1a3c6e] shadow-lg"
-          : "bg-[#1a3c6e]/95 backdrop-blur-sm"
-      }`}
-    >
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-[#1a3c6e] shadow-xl" : "bg-[#1a3c6e]/97 backdrop-blur-sm"}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-center gap-2 flex-shrink-0"
-          >
-            <div className="flex items-center gap-1">
-              <span className="text-white font-black text-xl tracking-tight">OMEGA</span>
-              <span className="text-[#e8801a] font-black text-xl tracking-tight">SERVICES</span>
-            </div>
+          <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center gap-2 flex-shrink-0">
+            <img src={logoImg} alt="OMEGA SERVICES" className="h-10 w-auto object-contain" />
           </button>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <button
-                key={link.key}
-                onClick={() => scrollTo(link.id)}
-                className="text-white/90 hover:text-white hover:bg-white/10 px-3 py-2 rounded-lg text-sm font-medium transition-colors"
-              >
+            {navLinks.map(link => (
+              <button key={link.key} onClick={() => scrollTo(link.id)}
+                className="text-white/90 hover:text-white hover:bg-white/10 px-3 py-2 rounded-lg text-sm font-medium transition-colors">
                 {t(link.key)}
               </button>
             ))}
@@ -109,27 +83,19 @@ export default function Navbar() {
 
           {/* Search + Lang + Mobile */}
           <div className="flex items-center gap-3">
-            {/* Search */}
             <div ref={searchRef} className="relative hidden md:block">
               <div className="flex items-center bg-white/10 rounded-lg px-3 py-1.5 gap-2">
                 <Search size={15} className="text-white/60" />
-                <input
-                  type="search"
-                  value={search}
-                  onChange={(e) => handleSearch(e.target.value)}
+                <input type="search" value={search} onChange={e => handleSearch(e.target.value)}
                   onFocus={() => search.length >= 2 && setShowResults(true)}
                   placeholder={language === "fr" ? "Rechercher..." : "بحث..."}
-                  className="bg-transparent text-white placeholder-white/50 text-sm outline-none w-36"
-                />
+                  className="bg-transparent text-white placeholder-white/50 text-sm outline-none w-36" />
               </div>
               {showResults && results.length > 0 && (
                 <div className="absolute top-full mt-1 left-0 right-0 bg-white rounded-lg shadow-xl overflow-hidden z-50 border border-gray-100">
                   {results.map((r, i) => (
-                    <button
-                      key={i}
-                      onClick={() => scrollTo(r.section)}
-                      className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#1a3c6e] transition-colors block"
-                    >
+                    <button key={i} onClick={() => scrollTo(r.section)}
+                      className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#1a3c6e] transition-colors block">
                       {r.label[language]}
                     </button>
                   ))}
@@ -139,33 +105,13 @@ export default function Navbar() {
 
             {/* Language Toggle */}
             <div className="flex items-center bg-white/10 rounded-lg overflow-hidden">
-              <button
-                onClick={() => setLanguage("fr")}
-                className={`px-3 py-1.5 text-xs font-semibold transition-colors ${
-                  language === "fr"
-                    ? "bg-[#e8801a] text-white"
-                    : "text-white/80 hover:text-white"
-                }`}
-              >
-                FR
-              </button>
-              <button
-                onClick={() => setLanguage("ar")}
-                className={`px-3 py-1.5 text-xs font-semibold transition-colors ${
-                  language === "ar"
-                    ? "bg-[#e8801a] text-white"
-                    : "text-white/80 hover:text-white"
-                }`}
-              >
-                AR
-              </button>
+              <button onClick={() => setLanguage("fr")}
+                className={`px-3 py-1.5 text-xs font-semibold transition-colors ${language === "fr" ? "bg-[#e8801a] text-white" : "text-white/80 hover:text-white"}`}>FR</button>
+              <button onClick={() => setLanguage("ar")}
+                className={`px-3 py-1.5 text-xs font-semibold transition-colors ${language === "ar" ? "bg-[#e8801a] text-white" : "text-white/80 hover:text-white"}`}>AR</button>
             </div>
 
-            {/* Mobile menu toggle */}
-            <button
-              className="md:hidden text-white p-1"
-              onClick={() => setMobileOpen(!mobileOpen)}
-            >
+            <button className="md:hidden text-white p-1" onClick={() => setMobileOpen(!mobileOpen)}>
               {mobileOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
@@ -175,39 +121,19 @@ export default function Navbar() {
         {mobileOpen && (
           <div className="md:hidden pb-4 border-t border-white/10 pt-3">
             <div className="flex flex-col gap-1 mb-3">
-              {navLinks.map((link) => (
-                <button
-                  key={link.key}
-                  onClick={() => scrollTo(link.id)}
-                  className="text-white/90 hover:bg-white/10 text-left px-3 py-2 rounded-lg text-sm font-medium transition-colors"
-                >
+              {navLinks.map(link => (
+                <button key={link.key} onClick={() => scrollTo(link.id)}
+                  className="text-white/90 hover:bg-white/10 text-left px-3 py-2 rounded-lg text-sm font-medium transition-colors">
                   {t(link.key)}
                 </button>
               ))}
             </div>
             <div className="flex items-center bg-white/10 rounded-lg px-3 py-1.5 gap-2">
               <Search size={15} className="text-white/60" />
-              <input
-                type="search"
-                value={search}
-                onChange={(e) => handleSearch(e.target.value)}
+              <input type="search" value={search} onChange={e => handleSearch(e.target.value)}
                 placeholder={language === "fr" ? "Rechercher..." : "بحث..."}
-                className="bg-transparent text-white placeholder-white/50 text-sm outline-none flex-1"
-              />
+                className="bg-transparent text-white placeholder-white/50 text-sm outline-none flex-1" />
             </div>
-            {showResults && results.length > 0 && (
-              <div className="mt-1 bg-white rounded-lg shadow-xl overflow-hidden border border-gray-100">
-                {results.map((r, i) => (
-                  <button
-                    key={i}
-                    onClick={() => scrollTo(r.section)}
-                    className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 transition-colors block"
-                  >
-                    {r.label[language]}
-                  </button>
-                ))}
-              </div>
-            )}
           </div>
         )}
       </div>
