@@ -1,0 +1,259 @@
+Create a lightweight PREMIUM bilingual website named OMEGA SERVICES using the attached logo.
+
+IMPORTANT:
+Optimize the project to MINIMIZE AI token and credit consumption on Replit.
+
+DO NOT generate unnecessary complex code.
+DO NOT generate excessive animations.
+Keep the structure modular, clean and lightweight.
+
+━━━━━━━━━━━━━━━━━━
+🌐 LANGUAGES
+━━━━━━━━━━━━━━━━━━
+
+- Arabic RTL
+- French LTR
+- Simple language switcher
+
+━━━━━━━━━━━━━━━━━━
+🎨 DESIGN
+━━━━━━━━━━━━━━━━━━
+
+Use:
+- Professional blue
+- Elegant orange
+- White backgrounds
+
+Style:
+- Modern corporate UI
+- Simple glassmorphism
+- Soft shadows
+- Rounded cards
+- Responsive design
+- Sticky navbar
+- Smooth scrolling
+
+IMPORTANT:
+Navbar must NOT be too transparent.
+
+━━━━━━━━━━━━━━━━━━
+🔎 SEARCH BAR
+━━━━━━━━━━━━━━━━━━
+
+Add a lightweight elegant search bar in navbar.
+
+Search:
+- Services
+- Blog
+- Guides
+
+Keep implementation simple and optimized.
+
+━━━━━━━━━━━━━━━━━━
+🏠 HERO SECTION
+━━━━━━━━━━━━━━━━━━
+
+Use a professional administration office image.
+
+Arabic:
+جميع خدماتك في مكان واحد
+
+French:
+Tous vos services en un seul endroit
+
+Buttons:
+- Réserver
+- WhatsApp
+- Contact
+
+Add:
+- soft overlay
+- simple fade animation
+
+━━━━━━━━━━━━━━━━━━
+🧩 SERVICES
+━━━━━━━━━━━━━━━━━━
+
+Create lightweight animated cards with:
+- realistic images
+- icons
+- hover effect
+- responsive layout
+
+Services:
+
+1. Services administratifs variés
+2. Services de sécurité sociale
+3. Dossiers de retraite à l’étranger
+4. Services VISA
+5. Services étudiants
+6. Ressources Humaines
+
+Each card:
+- image
+- title
+- short description
+- CTA button
+
+━━━━━━━━━━━━━━━━━━
+📩 CONTACT + EMAIL
+━━━━━━━━━━━━━━━━━━
+
+IMPORTANT:
+Use RESEND for emails.
+
+ALL forms must send messages to:
+
+omegaserviceszorgui@gmail.com
+
+Use:
+- lightweight API routes
+- clean backend
+- minimal dependencies
+
+Install only:
+npm install resend
+
+Create:
+- contact API
+- booking API
+
+Environment variable:
+RESEND_API_KEY
+
+Add:
+- success message
+- error message
+- loading state
+
+━━━━━━━━━━━━━━━━━━
+📅 BOOKING
+━━━━━━━━━━━━━━━━━━
+
+Simple booking form:
+- name
+- phone
+- email
+- service
+- date
+- message
+
+Send booking directly by email.
+
+━━━━━━━━━━━━━━━━━━
+📘 KNOWLEDGE CENTER
+━━━━━━━━━━━━━━━━━━
+
+Create:
+- PDF guides section
+- Infographics section
+
+Support files from:
+- /public/guides/
+- /public/infographics/
+
+Use lightweight cards.
+
+━━━━━━━━━━━━━━━━━━
+📰 BLOG
+━━━━━━━━━━━━━━━━━━
+
+Create a lightweight blog with:
+- thumbnails
+- categories
+- modern cards
+
+Topics:
+- retraite
+- visa
+- sécurité sociale
+- étudiants
+- RH
+
+━━━━━━━━━━━━━━━━━━
+👤 ABOUT SECTION
+━━━━━━━━━━━━━━━━━━
+
+Use founder image.
+
+Text:
+Mohamed Salah Zorgui
+Plus de 30 ans d’expérience.
+
+━━━━━━━━━━━━━━━━━━
+📞 CONTACT INFO
+━━━━━━━━━━━━━━━━━━
+
+Phone:
+98284858
+
+WhatsApp:
+54651063
+
+Email:
+omegaserviceszorgui@gmail.com
+
+Location:
+Kasserine - Tunisie
+
+━━━━━━━━━━━━━━━━━━
+⬆️⬇️ FLOATING BUTTONS
+━━━━━━━━━━━━━━━━━━
+
+Add:
+- WhatsApp button
+- Scroll-to-top
+- Scroll-to-bottom
+
+Position:
+LEFT side
+
+━━━━━━━━━━━━━━━━━━
+📂 GITHUB SUPPORT
+━━━━━━━━━━━━━━━━━━
+
+Support uploaded files from GitHub public folders:
+
+- /public/guides/
+- /public/infographics/
+- /public/blog/
+- /public/services/
+- /public/logo/
+- /public/founder/
+
+Load assets dynamically.
+
+━━━━━━━━━━━━━━━━━━
+🖼️ IMAGES
+━━━━━━━━━━━━━━━━━━
+
+Generate professional realistic images for:
+- service cards
+- blog
+- guides
+- infographics
+
+Keep image generation optimized and lightweight.
+
+━━━━━━━━━━━━━━━━━━
+⚙️ TECH STACK
+━━━━━━━━━━━━━━━━━━
+
+Use:
+- Next.js
+- Tailwind CSS
+- Minimal Framer Motion
+- Responsive design
+
+Optimize for:
+- Replit
+- GitHub
+- Vercel
+- Fast loading
+- Low AI token usage
+- Low credit consumption
+
+IMPORTANT:
+Generate CLEAN and SHORT code.
+Avoid unnecessary components and overengineering.
+Add these images to cards of services's section. Utiliser le logo et l'image du fondateur dans"qui sommes nous". 

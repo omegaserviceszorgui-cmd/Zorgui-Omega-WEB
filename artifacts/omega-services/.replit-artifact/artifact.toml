@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "OMEGA SERVICES"
+version = "1.0.0"
+id = "artifacts/omega-services"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18304
+
+[services.development]
+run = "pnpm --filter @workspace/omega-services run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/omega-services", "run", "build" ]
+publicDir = "artifacts/omega-services/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18304"
+BASE_PATH = "/"

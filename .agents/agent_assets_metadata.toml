@@ -1,0 +1,62 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "JG2icsFiCTwpBmPAJ0IMi"
+uri = "file://artifacts/omega-services/src/assets/images/hero-bg.png"
+type = "image"
+title = "Professional office interior"
+
+[[generated]]
+id = "tixioK1njDEWRAiaGVTMP"
+uri = "file://artifacts/omega-services/src/assets/images/service-admin.png"
+type = "image"
+title = "Organized paperwork on desk"
+
+[[generated]]
+id = "d1iEpWTb-FX0SrXr2sq7M"
+uri = "file://artifacts/omega-services/src/assets/images/service-social.png"
+type = "image"
+title = "Social security concept"
+
+[[generated]]
+id = "fVIwHMA4Kv_8omxeX587L"
+uri = "file://artifacts/omega-services/src/assets/images/service-retraite.png"
+type = "image"
+title = "International retirement concept"
+
+[[generated]]
+id = "sAimJbu2R1fkawWpmg14n"
+uri = "file://artifacts/omega-services/src/assets/images/service-visa.png"
+type = "image"
+title = "Visa application concept"
+
+[[generated]]
+id = "fEldOPtV0wZj4FOxAxCKA"
+uri = "file://artifacts/omega-services/src/assets/images/service-student.png"
+type = "image"
+title = "Student services concept"
+
+[[generated]]
+id = "APy3I7KGNx6j85xRD2dwp"
+uri = "file://artifacts/omega-services/src/assets/images/service-hr.png"
+type = "image"
+title = "Human resources concept"
+
+[[generated]]
+id = "TID7vnYVjgSQ6FI7htQPD"
+uri = "file://artifacts/omega-services/src/assets/images/blog-retraite.png"
+type = "image"
+title = "Happy couple retirement"
+
+[[generated]]
+id = "KNFMe9UGFIUIb9xtr5p5x"
+uri = "file://artifacts/omega-services/src/assets/images/blog-visa.png"
+type = "image"
+title = "Travel passport airport"
+
+[[generated]]
+id = "bXDrE1my57tZHOtfPZgtD"
+uri = "file://artifacts/omega-services/src/assets/images/blog-etudiants.png"
+type = "image"
+title = "Student studying library"
