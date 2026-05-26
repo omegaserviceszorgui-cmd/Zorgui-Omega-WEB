@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd omega-next && npm install && npm run build",
+  "outputDirectory": "omega-next/.next",
+  "framework": "nextjs",
+  "installCommand": "cd omega-next && npm install"
+}
