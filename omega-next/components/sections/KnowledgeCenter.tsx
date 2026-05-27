@@ -10,6 +10,7 @@ const guides = [
   { fr: "Guide Sécurité Sociale", ar: "دليل الضمان الاجتماعي", file: "securite-sociale/pension-vieillesse-tunisie.pdf" },
   { fr: "Guide Étudiant à l'étranger", ar: "دليل الطالب بالخارج", file: "guide-etudiant.pdf" },
 ];
+
 const infographics = [
   { fr: "Étapes de la demande VISA", ar: "خطوات طلب التأشيرة", file: "infographie-visa.png" },
   { fr: "Dossier de retraite", ar: "ملف التقاعد", file: "infographie-retraite.png" },
@@ -44,22 +45,13 @@ export default function KnowledgeCenter() {
                 viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.07 }}
                 className="group bg-white rounded-xl shadow-sm hover:shadow-lg border border-gray-100 p-5 transition-all hover:-translate-y-1"
               >
-                {guide.image ? (
-  <img
-    src={`/guides/${guide.image}`}
-    alt={guide.fr}
-    className="w-full h-40 object-cover rounded-xl mb-3"
-  />
-) : (
-  <div className="w-12 h-14 bg-red-50 rounded-lg flex items-center justify-center mb-3">
-    <FileText className="w-7 h-7 text-red-500" />
-  </div>
-)}
+                <div className="w-12 h-14 bg-red-50 rounded-lg flex items-center justify-center mb-3">
+                  <FileText className="w-7 h-7 text-red-500" />
                 </div>
                 <p className="font-semibold text-[#1a3c6e] text-sm mb-4 leading-snug">
                   {language === "fr" ? guide.fr : guide.ar}
                 </p>
-                <a href={`/guides/${guide.file}`}>
+                <a href={`/guides/${guide.file}`}
                   className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#e8801a] hover:gap-2.5 transition-all">
                   <Download className="w-3.5 h-3.5" />
                   {t("knowledge.download")}
