@@ -6,7 +6,7 @@ import { FileText, ImageIcon, Download, Eye } from "lucide-react";
 
 const guides = [
   { fr: "Guide de la retraite à l'étranger", ar: "دليل التقاعد بالخارج", file: "guide-retraite.pdf" },
-  { fr: "Guide VISA Schengen", ar: "دليل تأشيرة شنغن", file: "visa/Guide_VISA_Schengen_OmegaServices.pdf" },
+  { fr: "Guide VISA Schengen", ar: "دليل تأشيرة شنغن", file: "https://drive.google.com/file/d/1W1z_WHNP_qGYdss5FMhwjxv1SZklnzi3/view?usp=drivesdk" },
   { fr: "Guide Sécurité Sociale", ar: "دليل الضمان الاجتماعي", file: "securite-sociale/pension-vieillesse-tunisie.pdf",
   },
   
@@ -62,7 +62,7 @@ export default function KnowledgeCenter() {
                 <p className="font-semibold text-[#1a3c6e] text-sm mb-4 leading-snug">
                   {language === "fr" ? guide.fr : guide.ar}
                 </p>
-                <a href={`/guides/${guide.file}`}
+                <a href={guide.file.startsWith('http') ? guide.file : `/guides/${guide.file}`}>
                   className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#e8801a] hover:gap-2.5 transition-all">
                   <Download className="w-3.5 h-3.5" />
                   {t("knowledge.download")}
