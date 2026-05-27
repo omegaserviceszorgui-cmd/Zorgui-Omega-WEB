@@ -9,7 +9,7 @@ const guides = [
   { fr: "Guide VISA Schengen", ar: "دليل تأشيرة شنغن", file: "visa/Guide_VISA_Schengen_OmegaServices.pdf" },
   { fr: "Guide Sécurité Sociale", ar: "دليل الضمان الاجتماعي", file: "securite-sociale/pension-vieillesse-tunisie.pdf",
   },
- },
+  
   { fr: "Guide Étudiant à l'étranger", ar: "دليل الطالب بالخارج", file: "guide-etudiant.pdf" },
 ];
 
