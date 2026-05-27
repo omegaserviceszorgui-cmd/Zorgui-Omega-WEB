@@ -59,7 +59,7 @@ export default function KnowledgeCenter() {
                 <p className="font-semibold text-[#1a3c6e] text-sm mb-4 leading-snug">
                   {language === "fr" ? guide.fr : guide.ar}
                 </p>
-                <a href={guide.file.startsWith('http') ? guide.file : `/guides/${guide.file}`}>
+                <a href={`/guides/${guide.file}`}>
                   className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#e8801a] hover:gap-2.5 transition-all">
                   <Download className="w-3.5 h-3.5" />
                   {t("knowledge.download")}
