@@ -15,7 +15,7 @@ const infographics = [
   { fr: "Étapes de la demande VISA", ar: "خطوات طلب التأشيرة", file: "visa/etapes-demande-visa.png" },
   { fr: "Dossier de retraite", ar: "ملف التقاعد", file: "infographie-retraite.png" },
   { fr: "Services administratifs", ar: "الخدمات الإدارية", file: "infographie-services.png" },
-  { fr: "Services sécurité sociale ", ar: "الضمان الاجتماعي ", file: "securite-sociale/pension-de-vieillesse.png" },
+  { fr: "Services sécurité sociale", ar: "الضمان الاجتماعي", file: "securite-sociale/pension-de-vieillesse.png" },
 ];
 
 export default function KnowledgeCenter() {
@@ -31,7 +31,6 @@ export default function KnowledgeCenter() {
           </p>
           <div className="mt-4 w-16 h-1 bg-[#e8801a] mx-auto rounded-full" />
         </div>
-
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 bg-[#1a3c6e] rounded-xl flex items-center justify-center">
@@ -52,8 +51,7 @@ export default function KnowledgeCenter() {
                 <p className="font-semibold text-[#1a3c6e] text-sm mb-4 leading-snug">
                   {language === "fr" ? guide.fr : guide.ar}
                 </p>
-                <a href={`/guides/${guide.file}`}
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#e8801a] hover:gap-2.5 transition-all">
+                <a href={`/guides/${guide.file}`} className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#e8801a] hover:gap-2.5 transition-all">
                   <Download className="w-3.5 h-3.5" />
                   {t("knowledge.download")}
                 </a>
@@ -61,7 +59,6 @@ export default function KnowledgeCenter() {
             ))}
           </div>
         </div>
-
         <div>
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 bg-[#e8801a] rounded-xl flex items-center justify-center">
@@ -81,8 +78,7 @@ export default function KnowledgeCenter() {
                   <p className="font-semibold text-[#1a3c6e] text-sm mb-3">
                     {language === "fr" ? info.fr : info.ar}
                   </p>
-                  <a href={`/infographics/${info.file}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#e8801a]">
+                  <a href={`/infographics/${info.file}`} className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#e8801a]">
                     <Eye className="w-3.5 h-3.5" />
                     {t("knowledge.view")}
                   </a>
