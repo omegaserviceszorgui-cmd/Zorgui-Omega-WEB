@@ -6,7 +6,7 @@ import { FileText, ImageIcon, Download, Eye } from "lucide-react";
 
 const guides = [
   { fr: "Guide de la retraite à l'étranger", ar: "دليل التقاعد بالخارج", file: "guide-retraite.pdf" },
-  { fr: "Guide VISA Schengen", ar: "دليل تأشيرة شنغن", file: "https://drive.google.com/file/d/1W1z_WHNP_qGYdss5FMhwjxv1SZklnzi3/view?usp=drivesdk" },
+  { fr: "Guide VISA Schengen", ar: "دليل تأشيرة شنغن", file: "visa/guide-visa-schengen.pdf" },
   { fr: "Guide Sécurité Sociale", ar: "دليل الضمان الاجتماعي", file: "securite-sociale/pension-vieillesse-tunisie.pdf",
   },
   
