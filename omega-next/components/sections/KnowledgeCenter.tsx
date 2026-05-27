@@ -75,9 +75,7 @@ export default function KnowledgeCenter() {
                 viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.1 }}
                 className="group bg-white rounded-xl shadow-sm hover:shadow-lg border border-gray-100 overflow-hidden transition-all hover:-translate-y-1"
               >
-                <div className="h-36 bg-gradient-to-br from-[#1a3c6e]/10 to-[#e8801a]/10 flex items-center justify-center">
-                  <ImageIcon className="w-14 h-14 text-[#1a3c6e]/30" />
-                </div>
+                <div className="h-36 overflow-hidden"><img src={`/infographics/${info.file}`} alt={info.fr} className="w-full h-full object-cover" /></div>
                 <div className="p-4">
                   <p className="font-semibold text-[#1a3c6e] text-sm mb-3">
                     {language === "fr" ? info.fr : info.ar}
