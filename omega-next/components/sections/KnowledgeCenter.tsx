@@ -69,7 +69,7 @@ export default function KnowledgeCenter() {
             </div>
             <h3 className="text-xl font-bold text-[#1a3c6e]">{t("knowledge.infographics")}</h3>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-5">
             {infographics.map((info, i) => (
               <motion.div key={i}
                 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
