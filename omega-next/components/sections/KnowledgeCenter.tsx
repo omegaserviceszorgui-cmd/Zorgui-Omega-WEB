@@ -5,6 +5,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { motion } from "framer-motion";
 import { FileText, ImageIcon, Download, Eye } from "lucide-react";
 import GuideModal from "./GuideModal";
+import InfographieModal from "./InfographieModal";
 
 const guides = [
   { fr: "Guide de la retraite à l'étranger", ar: "دليل التقاعد بالخارج", file: "guide-retraite.pdf", preview: null },
@@ -23,6 +24,7 @@ const infographics = [
 export default function KnowledgeCenter() {
   const { t, language } = useLanguage();
   const [selectedGuide, setSelectedGuide] = useState<typeof guides[0] | null>(null);
+  const [selectedInfo, setSelectedInfo] = useState<typeof infographics[0] | null>(null);
 
   return (
     <section id="knowledge" className="py-20 bg-gradient-to-br from-[#1a3c6e]/5 to-white">
@@ -81,17 +83,18 @@ export default function KnowledgeCenter() {
               <motion.div key={i}
                 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="group bg-white rounded-xl shadow-sm hover:shadow-lg border border-gray-100 overflow-hidden transition-all hover:-translate-y-1"
+                className="group bg-white rounded-xl shadow-sm hover:shadow-lg border border-gray-100 overflow-hidden transition-all hover:-translate-y-1 cursor-pointer"
+                onClick={() => setSelectedInfo(info)}
               >
                 <div className="h-36 overflow-hidden"><img src={`/infographics/${info.file}`} alt={info.fr} className="w-full h-full object-cover" /></div>
                 <div className="p-4">
                   <p className="font-semibold text-[#1a3c6e] text-sm mb-3">
                     {language === "fr" ? info.fr : info.ar}
                   </p>
-                  <a href={`/infographics/${info.file}`} className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#e8801a]">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#e8801a]">
                     <Eye className="w-3.5 h-3.5" />
                     {t("knowledge.view")}
-                  </a>
+                  </span>
                 </div>
               </motion.div>
             ))}
@@ -99,6 +102,7 @@ export default function KnowledgeCenter() {
         </div>
       </div>
       <GuideModal guide={selectedGuide} onClose={() => setSelectedGuide(null)} />
+      <InfographieModal info={selectedInfo} onClose={() => setSelectedInfo(null)} />
     </section>
   );
 }
