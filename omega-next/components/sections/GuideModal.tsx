@@ -47,7 +47,7 @@ export default function GuideModal({ guide, onClose }: GuideModalProps) {
               transition={{ duration: 0.25, ease: "easeOut" }}
             >
               <div className="bg-white/95 backdrop-blur-xl rounded-3xl overflow-hidden shadow-2xl border border-white/40">
-                <div className="relative h-90 overflow-hidden">
+                <div className="relative h-96 overflow-hidden">
                   {guide.preview ? (
                     <img src={`/guides/${guide.preview}`} alt={guide.fr} className="w-full h-full object-cover" />
                   ) : (
