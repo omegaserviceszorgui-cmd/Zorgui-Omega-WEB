@@ -8,7 +8,7 @@ import GuideModal from "./GuideModal";
 import InfographieModal from "./InfographieModal";
 
 const guides = [
-  { fr: "Guide de la retraite à l'étranger", ar: "دليل التقاعد بالخارج", file: "retraite-etranger/guide-retraite-tunisie-etranger.pdf", preview: "retraire-étranger.jpeg"},
+  { fr: "Guide de la retraite à l'étranger", ar: "دليل التقاعد بالخارج", file: "retraite-etranger/guide-retraite-tunisie-etranger.pdf", preview: "retraire-étranger.jpg"},
   { fr: "Guide VISA Schengen", ar: "دليل تأشيرة شنغن", file: "visa/guide-visa-schengen.pdf", preview: "previews/etapes-visa.jpg" },
   { fr: "Guide Sécurité Sociale", ar: "دليل الضمان الاجتماعي", file: "securite-sociale/pension-vieillesse-tunisie.pdf", preview: "previews/pension-vieillesse.jpg" },
   { fr: "Guide Étudiant à l'étranger", ar: "دليل الطالب بالخارج", file: "guide-etudiant.pdf", preview: null },
