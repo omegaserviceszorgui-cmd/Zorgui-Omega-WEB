@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import { FileText, ImageIcon, Download, Eye } from "lucide-react";
 
 const guides = [
-  { fr: "Guide de la retraite à l'étranger", ar: "دليل التقاعد بالخارج", file: "guide-retraite.pdf" },
-  { fr: "Guide VISA Schengen", ar: "دليل تأشيرة شنغن", file: "visa/guide-visa-schengen.pdf" },
-  { fr: "Guide Sécurité Sociale", ar: "دليل الضمان الاجتماعي", file: "securite-sociale/pension-vieillesse-tunisie.pdf" },
-  { fr: "Guide Étudiant à l'étranger", ar: "دليل الطالب بالخارج", file: "guide-etudiant.pdf" },
+  { fr: "Guide de la retraite à l'étranger", ar: "دليل التقاعد بالخارج", file: "guide-retraite.pdf", preview: "previews/pension-vieillesse.jpg" },
+  { fr: "Guide VISA Schengen", ar: "دليل تأشيرة شنغن", file: "visa/guide-visa-schengen.pdf", preview: "previews/etapes-visa.jpg" },
+  { fr: "Guide Sécurité Sociale", ar: "دليل الضمان الاجتماعي", file: "securite-sociale/pension-vieillesse-tunisie.pdf", preview: null },
+  { fr: "Guide Étudiant à l'étranger", ar: "دليل الطالب بالخارج", file: "guide-etudiant.pdf", preview: null },
 ];
 
 const infographics = [
@@ -43,18 +43,24 @@ export default function KnowledgeCenter() {
               <motion.div key={i}
                 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="group bg-white rounded-xl shadow-sm hover:shadow-lg border border-gray-100 p-5 transition-all hover:-translate-y-1"
+                className="group bg-white rounded-xl shadow-sm hover:shadow-lg border border-gray-100 overflow-hidden transition-all hover:-translate-y-1"
               >
-                <div className="w-12 h-14 bg-red-50 rounded-lg flex items-center justify-center mb-3">
-                  <FileText className="w-7 h-7 text-red-500" />
+                {guide.preview ? (
+                  <div className="h-40 overflow-hidden"><img src={`/guides/${guide.preview}`} alt={guide.fr} className="w-full h-full object-cover" /></div>
+                ) : (
+                  <div className="h-40 bg-red-50 flex items-center justify-center">
+                    <FileText className="w-12 h-12 text-red-300" />
+                  </div>
+                )}
+                <div className="p-4">
+                  <p className="font-semibold text-[#1a3c6e] text-sm mb-4 leading-snug">
+                    {language === "fr" ? guide.fr : guide.ar}
+                  </p>
+                  <a href={`/guides/${guide.file}`} className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#e8801a] hover:gap-2.5 transition-all">
+                    <Download className="w-3.5 h-3.5" />
+                    {t("knowledge.download")}
+                  </a>
                 </div>
-                <p className="font-semibold text-[#1a3c6e] text-sm mb-4 leading-snug">
-                  {language === "fr" ? guide.fr : guide.ar}
-                </p>
-                <a href={`/guides/${guide.file}`} className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#e8801a] hover:gap-2.5 transition-all">
-                  <Download className="w-3.5 h-3.5" />
-                  {t("knowledge.download")}
-                </a>
               </motion.div>
             ))}
           </div>
