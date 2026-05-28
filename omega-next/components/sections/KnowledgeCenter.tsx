@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion } from "framer-motion";
 import { FileText, ImageIcon, Download, Eye } from "lucide-react";
+import GuideModal from "./GuideModal";
 
 const guides = [
   { fr: "Guide de la retraite à l'étranger", ar: "دليل التقاعد بالخارج", file: "guide-retraite.pdf", preview: null },
@@ -20,6 +22,7 @@ const infographics = [
 
 export default function KnowledgeCenter() {
   const { t, language } = useLanguage();
+  const [selectedGuide, setSelectedGuide] = useState<typeof guides[0] | null>(null);
 
   return (
     <section id="knowledge" className="py-20 bg-gradient-to-br from-[#1a3c6e]/5 to-white">
@@ -43,7 +46,8 @@ export default function KnowledgeCenter() {
               <motion.div key={i}
                 initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="group bg-white rounded-xl shadow-sm hover:shadow-lg border border-gray-100 overflow-hidden transition-all hover:-translate-y-1"
+                className="group bg-white rounded-xl shadow-sm hover:shadow-lg border border-gray-100 overflow-hidden transition-all hover:-translate-y-1 cursor-pointer"
+                onClick={() => setSelectedGuide(guide)}
               >
                 {guide.preview ? (
                   <div className="h-40 overflow-hidden"><img src={`/guides/${guide.preview}`} alt={guide.fr} className="w-full h-full object-cover" /></div>
@@ -56,10 +60,10 @@ export default function KnowledgeCenter() {
                   <p className="font-semibold text-[#1a3c6e] text-sm mb-4 leading-snug">
                     {language === "fr" ? guide.fr : guide.ar}
                   </p>
-                  <a href={`/guides/${guide.file}`} className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#e8801a] hover:gap-2.5 transition-all">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#e8801a]">
                     <Download className="w-3.5 h-3.5" />
                     {t("knowledge.download")}
-                  </a>
+                  </span>
                 </div>
               </motion.div>
             ))}
@@ -94,6 +98,7 @@ export default function KnowledgeCenter() {
           </div>
         </div>
       </div>
+      <GuideModal guide={selectedGuide} onClose={() => setSelectedGuide(null)} />
     </section>
   );
 }
