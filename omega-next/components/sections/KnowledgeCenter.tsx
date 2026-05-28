@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import { FileText, ImageIcon, Download, Eye } from "lucide-react";
 
 const guides = [
-  { fr: "Guide de la retraite à l'étranger", ar: "دليل التقاعد بالخارج", file: "guide-retraite.pdf", preview: "previews/pension-vieillesse.jpg" },
+  { fr: "Guide de la retraite à l'étranger", ar: "دليل التقاعد بالخارج", file: "guide-retraite.pdf", preview: null },
   { fr: "Guide VISA Schengen", ar: "دليل تأشيرة شنغن", file: "visa/guide-visa-schengen.pdf", preview: "previews/etapes-visa.jpg" },
-  { fr: "Guide Sécurité Sociale", ar: "دليل الضمان الاجتماعي", file: "securite-sociale/pension-vieillesse-tunisie.pdf", preview: null },
+  { fr: "Guide Sécurité Sociale", ar: "دليل الضمان الاجتماعي", file: "securite-sociale/pension-vieillesse-tunisie.pdf", preview: "previews/pension-vieillesse.png" },
   { fr: "Guide Étudiant à l'étranger", ar: "دليل الطالب بالخارج", file: "guide-etudiant.pdf", preview: null },
 ];
 
