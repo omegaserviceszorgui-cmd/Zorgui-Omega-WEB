@@ -13,7 +13,7 @@ const guides = [
 
 const infographics = [
   { fr: "Étapes de la demande VISA", ar: "خطوات طلب التأشيرة", file: "visa/etapes-demande-visa.png" },
-  { fr: "Dossier de retraite", ar: "ملف التقاعد", file: "infographie-retraite.png" },
+  { fr: "Dossier de retraite", ar: "ملف التقاعد", file: "retraite/retraite-etranger.png" },
   { fr: "Services administratifs", ar: "الخدمات الإدارية", file: "administration/societes-tunisiennes.png" },
   { fr: "Services sécurité sociale", ar: "الضمان الاجتماعي", file: "securite-sociale/pension-de-vieillesse.png" },
 ];
