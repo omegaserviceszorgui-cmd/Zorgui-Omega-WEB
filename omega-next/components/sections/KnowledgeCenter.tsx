@@ -11,7 +11,7 @@ const guides = [
   { fr: "Guide de la retraite à l'étranger", ar: "دليل التقاعد بالخارج", file: "retraite-etranger/retraite-tunisie-etranger.pdf", preview: "previews/preview-retaite-etranger.png" },
   { fr: "Guide VISA Schengen", ar: "دليل تأشيرة شنغن", file: "visa/guide-visa-schengen.pdf", preview: "previews/etapes-visa.jpg" },
   { fr: "Guide Sécurité Sociale", ar: "دليل الضمان الاجتماعي", file: "securite-sociale/pension-vieillesse-tunisie.pdf", preview: "previews/pension-vieillesse.jpg" },
-  { fr: "Guide de l' Étudiant ", ar: "دليل الطالب ", file: "guide-etudiant.pdf", preview: null },
+  { fr: "Guide de l' Étudiant ", ar: "دليل الطالب ", file: "guide-etudiant.pdf", preview: "previews/pfe-etudiants.png" },
 ];
 
 const infographics = [
