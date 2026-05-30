@@ -8,7 +8,8 @@ import BookingForm from "@/components/sections/BookingForm";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 import FloatingActions from "@/components/FloatingActions";
-
+import Slideshow from "@/components/Slideshow";
+import slidesData from "@/public/slideshow/slides.json";
 export default function Home() {
   return (
     <main>
