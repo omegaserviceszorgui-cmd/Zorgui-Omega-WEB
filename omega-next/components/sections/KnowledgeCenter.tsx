@@ -20,6 +20,7 @@ const infographics = [
   { fr: "Services administratifs", ar: "الخدمات الإدارية", file: "administration/societes-tunisiennes.png" },
   { fr: "Services sécurité sociale", ar: "الضمان الاجتماعي", file: "securite-sociale/pension-de-vieillesse.png" },
   { fr: "Services Étudiants ", ar: " خدمات الطلبة", file: "etudiants/guide-etudiants-pfe.png" },
+  { fr: "Services Ressources humaines ", ar: "  خدمات الموارد البشرية ", file: "ressources-humaines/RH-gouvernance.png" },
 ];
 
 export default function KnowledgeCenter() {
