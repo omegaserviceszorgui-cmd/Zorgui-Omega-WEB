@@ -1,1 +1,17 @@
-
+[
+  {
+    "image": "/slideshow/slide1.jpg",
+    "title": "Omega Services",
+    "subtitle": "Vos démarches administratives simplifiées"
+  },
+  {
+    "image": "/slideshow/slide2.jpg",
+    "title": "Guide Retraite",
+    "subtitle": "Accompagnement personnalisé à l'étranger"
+  },
+  {
+    "image": "/slideshow/slide3.jpg",
+    "title": "Services Consulaires",
+    "subtitle": "Expertise et proximité"
+  }
+]
