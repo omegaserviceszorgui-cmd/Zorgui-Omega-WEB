@@ -10,13 +10,13 @@ import Footer from "@/components/sections/Footer";
 import FloatingActions from "@/components/FloatingActions";
 import Slideshow from "@/components/Slideshow";
 import slidesData from "@/public/slideshow/slides.json";
+
 export default function Home() {
   return (
     <main>
       <Navbar />
       <Hero />
-<Slideshow slides={slidesData} />   {/* ← ajoute cette ligne */}
-<Services />
+      <Slideshow slides={slidesData} />
       <Services />
       <About />
       <KnowledgeCenter />
