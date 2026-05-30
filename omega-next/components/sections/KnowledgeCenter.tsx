@@ -12,8 +12,8 @@ const guides = [
   { fr: "Guide VISA Schengen", ar: "دليل تأشيرة شنغن", file: "visa/guide-visa-schengen.pdf", preview: "previews/preview-visa.png" },
   { fr: "Guide Sécurité Sociale", ar: "دليل الضمان الاجتماعي", file: "securite-sociale/pension-vieillesse-tunisie.pdf", preview: "previews/pension-vieillesse.jpg" },
   { fr: "Guide de l' Étudiant ", ar: "دليل الطالب ", file: "etudiants/guide-pfe.pdf", preview: "previews/pfe-etudiants.png" },
-  { fr: "Guide des Ressources Humaines ", ar: "دليل المواد البشرية ", file: "ressources-humaines/RH-gouvernance.pdf", preview: "previews/RH-preview.png" }
-];{ fr: "Guide de l'Administration ", ar: "دليل الخدمات الإدارية ", file: "administration/creation-societes.pdf", preview: "previews/preview-societes.png" },
+  { fr: "Guide des Ressources Humaines ", ar: "دليل المواد البشرية ", file: "ressources-humaines/RH-gouvernance.pdf", preview: "previews/RH-preview.png" }, 
+  { fr: "Guide de l'Administration ", ar: "دليل الخدمات الإدارية ", file: "administration/creation-societes.pdf", preview: "previews/preview-societes.png" },
 ];
 
 const infographics = [
