@@ -15,6 +15,8 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
+<Slideshow slides={slidesData} />   {/* ← ajoute cette ligne */}
+<Services />
       <Services />
       <About />
       <KnowledgeCenter />
